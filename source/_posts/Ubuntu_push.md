@@ -18,3 +18,4 @@ git commit
 git push origin gh-pages
 ```
 
+补充：创建新POST  “hexo new posts 博文标题”

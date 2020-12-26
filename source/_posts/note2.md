@@ -19,6 +19,72 @@ for ( int=1; int<=n; i++ )//only c99
 **总结：**
 
 1. for==while
+
 2. 如有固定次数，用for
+
 3. 如果必须执行一次，用do_while
+
 4. 其他用while
+
+5. 跳出循环：
+
+   1）break（一层一层的跳出）
+
+   ```
+   #include <stdio.h>
+   
+   int main()
+   {
+   	int x;
+   	int one, two, five;
+   	int exit = 0;
+   	//scanf("%d", &x);
+   	x = 2;
+   	for ( one = 1; one < x*10; one++ ) {
+   		for ( two = 1; two < x*10/2; two++ ) {
+   			for ( five = 1; five < x*10/5; five++ ) {
+   				if ( one + two*2 + five*5 == x*10 ) {
+   					printf("可以用%d个1角加%d个2角加%d个五角得到%d元\n",
+   						one, two, five, x);
+   					exit = 1;
+   					break; 
+   				}
+   			}
+   			if ( exit ==1 ) break;
+   		}
+   		if ( exit ==1 ) break;
+   	}
+   	return 0;
+   }
+   ```
+
+   2）goto <u>out</u> （直接跳出，out可用其他代码代替。tips：**尽量在多重循环跳出到最外层使用**）
+
+   ```
+   #include <stdio.h>
+   
+   int main()
+   {
+   	int x;
+   	int one, two, five;
+   	int exit = 0;
+   	//scanf("%d", &x);
+   	x = 2;
+   	for ( one = 1; one < x*10; one++ ) {
+   		for ( two = 1; two < x*10/2; two++ ) {
+   			for ( five = 1; five < x*10/5; five++ ) {
+   				if ( one + two*2 + five*5 == x*10 ) {
+   					printf("可以用%d个1角加%d个2角加%d个五角得到%d元\n",
+   						one, two, five, x);
+   						goto out; 
+   				}
+   			}
+   		}
+   	}
+   out:
+   	return 0;
+   }
+   ```
+
+   3）continue	(跳过循环这一轮剩下的语句进入下一轮)
+

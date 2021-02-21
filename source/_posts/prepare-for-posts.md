@@ -90,7 +90,7 @@ ssh-keygen -N "" -C 用户名@密钥场景（wsl）
 cat /root/.ssh/id_rsa.pub		//查询公钥
 ```
 
-![微信图片_20210116195749](D:\code\IHHRI.github.io\source\picture\微信图片_20210116195749.png)
+![https://github.com/IHHRI/picture/main](https://raw.githubusercontent.com/IHHRI/picture/main/_20210116195749.png)
 
 ## GitHub PART
 
@@ -98,7 +98,7 @@ cat /root/.ssh/id_rsa.pub		//查询公钥
 
 将钥匙地址放到**GitHub**中的**ssh keys**
 
-![微信图片_20210116201043](D:\code\IHHRI.github.io\source\picture\微信图片_20210116201043.png)![微信图片_20210116200658](D:\code\IHHRI.github.io\source\picture\微信图片_20210116200658.png)
+![https://github.com/IHHRI/picture/main](https://raw.githubusercontent.com/IHHRI/picture/main/_20210116200658.png)![https://github.com/IHHRI/picture/main](https://raw.githubusercontent.com/IHHRI/picture/main/_20210116201043.png)
 
 2. 将**gh-pages**设为本地上游
 
@@ -118,7 +118,7 @@ touch .travis.yml
 nano .travis.yml
 ```
 
-再填入![微信图片_20210116214107](D:\code\IHHRI.github.io\source\picture\微信图片_20210116214107.png)
+再填入![https://github.com/IHHRI/picture/main](https://raw.githubusercontent.com/IHHRI/picture/main/_20210116214107.png)
 
 创建travis账号，用github账号登录
 

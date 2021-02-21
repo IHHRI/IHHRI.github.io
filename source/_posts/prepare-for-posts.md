@@ -2,7 +2,7 @@
 layout: posts
 title: prepare_for_posts
 date: 2020-12-27 17:58:16
-tags:布置博客环境初始准备
+tags:
 ---
 
 ## 本地PART

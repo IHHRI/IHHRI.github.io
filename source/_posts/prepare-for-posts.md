@@ -98,7 +98,7 @@ cat /root/.ssh/id_rsa.pub		//查询公钥
 
 将钥匙地址放到**GitHub**中的**ssh keys**
 
-![https://github.com/IHHRI/picture/main](https://raw.githubusercontent.com/IHHRI/picture/main/_20210116200658.png)![https://github.com/IHHRI/picture/main](https://raw.githubusercontent.com/IHHRI/picture/main/_20210116201043.png)
+![https://github.com/IHHRI/picture/main](https://raw.githubusercontent.com/IHHRI/picture/main/_20210116200658_LI.jpg)![https://github.com/IHHRI/picture/main](https://raw.githubusercontent.com/IHHRI/picture/main/_20210116201043_LI.jpg)
 
 2. 将**gh-pages**设为本地上游
 

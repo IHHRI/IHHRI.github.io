@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: note2
+title: C_language_note2
 date: 2020-12-27 17:03:04
 tags:
 ---

@@ -2,7 +2,7 @@
 layout: posts
 title: C_language
 date: 2021-01-11 22:18:54
-tags:note
+tags:
 ---
 
 1. <u>case用法：</u>

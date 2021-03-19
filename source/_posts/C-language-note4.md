@@ -21,5 +21,33 @@ tags:
 \r	回车
 ```
 
- 
 
+
+# 整数的范围
+
+- char：1字节：-128~127
+
+  ```
+  char C = 127
+  c = c+1
+  最终c为128
+  ```
+
+  ![https://github.com/IHHRI/picture//blob/main](https://raw.githubusercontent.com/IHHRI/picture/main/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20210319211523.png)
+
+  short：2字节：-32768~32767
+
+- int：取决于编译器（CPU）
+
+- long：4字节
+
+- long long：8字节
+
+
+
+# 整数的输入输出（有两种形式：int或long long）
+
+- %d：int
+- %u：unsigned
+- %ld：long long
+- %lu：unsigned long long

@@ -2,7 +2,7 @@
 layout: posts
 title: posts_picture
 date: 2021-03-20 20:15:37
-tags：
+tags:
 ---
 
 # 用Typora写post上传图片

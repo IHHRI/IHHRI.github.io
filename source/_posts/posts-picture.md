@@ -5,15 +5,15 @@ date: 2021-03-20 20:15:37
 tags:
 ---
 
-# 用Typora写post上传图片
+## 用Typora写post上传图片
 
 
 
-## 先在GitHub创建新的仓库
+## 1.先在GitHub创建新的仓库
 
 
 
-## 将需要用到的照片上传至GitHub
+## 2.将需要用到的照片上传至GitHub
 
 ![https://github.com/IHHRI/picture](https://raw.githubusercontent.com/IHHRI/picture/main/image-20210320202112173.png)
 
@@ -27,7 +27,7 @@ tags:
 
 
 
-## 再将图像的地址输入
+## 3.再将图像的地址输入
 
 ![https://github.com/IHHRI/picture](https://raw.githubusercontent.com/IHHRI/picture/main/image-20210320203211668.png)
 
@@ -37,4 +37,4 @@ tags:
 
 
 
-## 然后直接push就OK了
+## 4.然后直接push就OK了

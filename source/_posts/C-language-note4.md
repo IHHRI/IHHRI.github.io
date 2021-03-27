@@ -29,9 +29,21 @@ tags:
 
 
 ```
-char C = 127
-c = c+1
-最终c为128
+	char c = 128;
+	c = c - 1;
+	printf("c=%d, i=%d\n", c, i); 
+	return 0;
+```
+
+若超出**char**范围，结果如下：
+
+```
+    c=127, i=255
+
+    --------------------------------
+    Process exited after 0.0121 seconds with return value 0
+    请按任意键继续. . .
+
 ```
 
 ![https://github.com/IHHRI/picture//blob/main](https://raw.githubusercontent.com/IHHRI/picture/main/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20210319211523.png)

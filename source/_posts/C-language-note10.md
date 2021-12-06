@@ -1,6 +1,7 @@
 ---
-title: postsC_language_note10
-date: 2021-05-25 21:10:15
+layout: posts
+title: C_language_note10
+date: 2021-12-06 19:09:47
 tags:
 ---
 

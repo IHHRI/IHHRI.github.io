@@ -7,6 +7,6 @@ tags:
 
 ​		接上一个post，让我们通过也简单了解各种协议与HTTP协议的关系。
 
-​        ![无标题](C:\Users\Administrator\Desktop\无标题.png)
+​        ![https://github.com/IHHRI/picture](https://raw.githubusercontent.com/IHHRI/picture/main/%E6%97%A0%E6%A0%87%E9%A2%98.png)
 
  这张图简单说明**IP**协议、**TCP**协议和DNS服务在使用**HTTP**协议的通信过程中各自发挥了哪些作用。

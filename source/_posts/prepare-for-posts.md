@@ -77,20 +77,39 @@ git checkout -b gh-pages
 
 ```
 git remote -v	//检查当前目录关联的仓库地址
-git remote add origin https://github.com/IHHRI.github.io.git
+git remote add origin https://github.com/IHHRI/IHHRI.github.io.git
 ```
 
-10. 拿公钥
+10. 新建文件并保存密码
+
+    ```
+    touch ~/.git-credentials
+    vim ~/.git-credentials
+    ```
+
+11. 添加内容
+
+    ```
+    https://{username}:{passwd}@github.com
+    ```
+
+​	![https://github.com/IHHRI/picture](https://github.com/IHHRI/picture/blob/main/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20220424232901.png?raw=true)
+
+![https://github.com/IHHRI/picture](https://github.com/IHHRI/picture/blob/main/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20220424232933.png?raw=true)
+
+12.添加git配置
 
 ```
-ssh-keygen -N "" -C 用户名@密钥场景（wsl）
+git config --global credential.helper store
 ```
 
+13.查看～/.gitconfig文件变化
+
 ```
-cat /root/.ssh/id_rsa.pub		//查询公钥
+cat ～/.gitconfig
 ```
 
-![https://github.com/IHHRI/picture/main](https://raw.githubusercontent.com/IHHRI/picture/main/_20210116195749.png)
+14.然后在尝试一下git push不再在需要密码了
 
 ## GitHub PART
 

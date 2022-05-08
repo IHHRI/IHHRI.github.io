@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/page/3/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:locale" content="en_US">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+      	
+	  <a id="nav-github-link" class="nav-icon" target="_blank" rel="noopener" href="https://github.com/IHHRI" title="Github"></a>
+      	
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main">
+  
+    <article id="posts-prepare-for-posts" class="article article-type-posts" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/12/27/prepare-for-posts/" class="article-date">
+  <time datetime="2020-12-27T09:58:16.000Z" itemprop="datePublished">2020-12-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/12/27/prepare-for-posts/">prepare_for_posts</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+	<h2 id="本地-PART"><a href="#本地-PART" class="headerlink" title="本地 PART"></a>本地 PART</h2><ol>
+<li>装<strong>npm，nodejs</strong></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">curl -sL https:&#x2F;&#x2F;deb.nodesource.com&#x2F;setup_10.x -o nodesource_setup.sh</span><br><span class="line">sudo bash nodesource_setup.sh</span><br><span class="line">sudo apt install nodejs</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm -v	&#x2F;&#x2F;查看nmp版本</span><br><span class="line">nodejs -v	&#x2F;&#x2F;查看nodejs版本</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>装<strong>gcc，g++ make</strong></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install gcc g++ make</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>设<strong>npm，proxy</strong>代理，方便安装博客框架</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm config set proxy http:&#x2F;&#x2F;127.0.0.1:1081</span><br><span class="line">npm config set https-proxy http:&#x2F;&#x2F;127.0.0.1:1081</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm config list		&#x2F;&#x2F;查看npm的配置文件</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>设<strong>git</strong>代理</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global http.proxy http:&#x2F;&#x2F;127.0.0.1:1081</span><br><span class="line">git config --global https.proxy http:&#x2F;&#x2F;127.0.0.1:1081</span><br></pre></td></tr></table></figure>
+
+<ol start="5">
+<li>用<strong>npm</strong>这个<strong>nodejs</strong>的包管理器，安装博客框架<strong>hexo</strong></li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo --save -g</span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li>在D盘新建个code并在路面新建仓库目录</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -p &#x2F;mnt&#x2F;d&#x2F;code&#x2F;IHHRI.github.io</span><br></pre></td></tr></table></figure>
+
+<ol start="7">
+<li>用<strong>hexo</strong>初始化这个目录框架内容</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;mnt&#x2F;d&#x2F;code&#x2F;IHHRI.github.io</span><br><span class="line">hexo init</span><br></pre></td></tr></table></figure>
+
+<ol start="8">
+<li><strong>git init</strong>把当前目录准备成一个代码仓库</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
+
+<ol start="9">
+<li>切换并新建一个<strong>gh-pages</strong>分支（用作储存代码）</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout -b gh-pages</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote -v	&#x2F;&#x2F;检查当前目录关联的仓库地址</span><br><span class="line">git remote add origin https:&#x2F;&#x2F;github.com&#x2F;IHHRI&#x2F;IHHRI.github.io.git</span><br></pre></td></tr></table></figure>
+
+<ol start="10">
+<li><p>新建文件并保存密码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">touch ~&#x2F;.git-credentials</span><br><span class="line">vim ~&#x2F;.git-credentials</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加内容</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https:&#x2F;&#x2F;&#123;username&#125;:&#123;passwd&#125;@github.com</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>​    <img src="https://github.com/IHHRI/picture/blob/main/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20220424232901.png?raw=true" alt="https://github.com/IHHRI/picture"></p>
+<p><img src="https://github.com/IHHRI/picture/blob/main/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20220424232933.png?raw=true" alt="https://github.com/IHHRI/picture"></p>
+<p>12.添加git配置</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global credential.helper store</span><br></pre></td></tr></table></figure>
+
+<p>13.查看～/.gitconfig文件变化</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat ～&#x2F;.gitconfig</span><br></pre></td></tr></table></figure>
+
+<p>14.然后在尝试一下git push不再在需要密码了</p>
+<h2 id="GitHub-PART"><a href="#GitHub-PART" class="headerlink" title="GitHub PART"></a>GitHub PART</h2><ol>
+<li>注册GitHub</li>
+</ol>
+<p>将钥匙地址放到<strong>GitHub</strong>中的<strong>ssh keys</strong></p>
+<p><img src="https://raw.githubusercontent.com/IHHRI/picture/main/_20210116200658_LI.jpg" alt="https://github.com/IHHRI/picture/main"><img src="https://raw.githubusercontent.com/IHHRI/picture/main/_20210116201043_LI.jpg" alt="https://github.com/IHHRI/picture/main"></p>
+<ol start="2">
+<li>将<strong>gh-pages</strong>设为本地上游</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push --set-upsream origin gh-pages</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>新建个<strong>travis</strong>来自动编译博客代码</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">touch .travis.yml</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>用<strong>nano</strong>编辑它</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nano .travis.yml</span><br></pre></td></tr></table></figure>
+
+<p>再填入<img src="https://raw.githubusercontent.com/IHHRI/picture/main/_20210116214107.png" alt="https://github.com/IHHRI/picture/main"></p>
+<p>创建travis账号，用github账号登录</p>
+<h2 id="用Ubuntu推送博文"><a href="#用Ubuntu推送博文" class="headerlink" title="用Ubuntu推送博文"></a>用Ubuntu推送博文</h2><ol>
+<li><p>进入IHHRI.github.io</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cd &#x2F;mnt&#x2F;d&#x2F;code&#x2F;IHHRI.github.io </span><br></pre></td></tr></table></figure>
+</li>
+<li><p>添加所有文件（若想单一想添加可：git add fileA，git add fileB…）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将本地修改过的文件提交到本地库中</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m “名字”</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>将最新信息发送给远程库（”git status”查看现在所在的分支）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push origin gh-pages</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>补充：创建新POST  “hexo new posts 博文标题”</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/12/27/prepare-for-posts/" data-id="cl2xc6oy9000j8ju4gihyfyzj" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="posts-C-language-note2" class="article article-type-posts" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/12/27/C-language-note2/" class="article-date">
+  <time datetime="2020-12-27T09:03:04.000Z" itemprop="datePublished">2020-12-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/12/27/C-language-note2/">C_language_note2</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+	<h1 id="循环：1-do-while；2-while（if）；3-for"><a href="#循环：1-do-while；2-while（if）；3-for" class="headerlink" title="循环：1.do-while；2.while（if）；3.for"></a>循环：1.do-while；2.while（if）；3.for</h1><p><strong>do-while</strong></p>
+<p>先做循环内的句子再判断条件</p>
+<p><strong>while (if)</strong></p>
+<p><strong>for</strong><u>对于的意思</u>（ 初始动作【可省略】<strong>；</strong>循环继续条件<strong>；</strong>循环每轮要做的动作【可省略】）</p>
+<p>循环控制变量<strong>i</strong>只在循环里被使用，在循环外面没有任何用处，可以把变量<strong>i</strong>的定义写到for语句里面。eg.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for ( int&#x3D;1; int&lt;&#x3D;n; i++ )&#x2F;&#x2F;only c99</span><br></pre></td></tr></table></figure>
+
+<p>读成：对于一开始的<strong>int=1</strong>，当<strong>int&lt;=n</strong>时，重复做循环体，每轮循环在做完循环体内语句后，使得**i++**。</p>
+<p><strong>总结：</strong></p>
+<ol>
+<li><p>for==while</p>
+</li>
+<li><p>如有固定次数，用for</p>
+</li>
+<li><p>如果必须执行一次，用do_while</p>
+</li>
+<li><p>其他用while</p>
+</li>
+<li><p>跳出循环：</p>
+<p>1）break（一层一层的跳出）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int x;</span><br><span class="line">	int one, two, five;</span><br><span class="line">	int exit &#x3D; 0;</span><br><span class="line">	&#x2F;&#x2F;scanf(&quot;%d&quot;, &amp;x);</span><br><span class="line">	x &#x3D; 2;</span><br><span class="line">	for ( one &#x3D; 1; one &lt; x*10; one++ ) &#123;</span><br><span class="line">		for ( two &#x3D; 1; two &lt; x*10&#x2F;2; two++ ) &#123;</span><br><span class="line">			for ( five &#x3D; 1; five &lt; x*10&#x2F;5; five++ ) &#123;</span><br><span class="line">				if ( one + two*2 + five*5 &#x3D;&#x3D; x*10 ) &#123;</span><br><span class="line">					printf(&quot;可以用%d个1角加%d个2角加%d个五角得到%d元\n&quot;,</span><br><span class="line">						one, two, five, x);</span><br><span class="line">					exit &#x3D; 1;</span><br><span class="line">					break; </span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			if ( exit &#x3D;&#x3D;1 ) break;</span><br><span class="line">		&#125;</span><br><span class="line">		if ( exit &#x3D;&#x3D;1 ) break;</span><br><span class="line">	&#125;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2）goto <u>out</u> （直接跳出，out可用其他代码代替。tips：<strong>尽量在多重循环跳出到最外层使用</strong>）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int x;</span><br><span class="line">	int one, two, five;</span><br><span class="line">	int exit &#x3D; 0;</span><br><span class="line">	&#x2F;&#x2F;scanf(&quot;%d&quot;, &amp;x);</span><br><span class="line">	x &#x3D; 2;</span><br><span class="line">	for ( one &#x3D; 1; one &lt; x*10; one++ ) &#123;</span><br><span class="line">		for ( two &#x3D; 1; two &lt; x*10&#x2F;2; two++ ) &#123;</span><br><span class="line">			for ( five &#x3D; 1; five &lt; x*10&#x2F;5; five++ ) &#123;</span><br><span class="line">				if ( one + two*2 + five*5 &#x3D;&#x3D; x*10 ) &#123;</span><br><span class="line">					printf(&quot;可以用%d个1角加%d个2角加%d个五角得到%d元\n&quot;,</span><br><span class="line">						one, two, five, x);</span><br><span class="line">						goto out; </span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">out:</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>3）continue    (跳过循环这一轮剩下的语句进入下一轮)</p>
+</li>
+</ol>
+<h1 id="浮点运算的精度（注意：带小数点的字面是double而非float，而float需要用f或F后缀表明身份）"><a href="#浮点运算的精度（注意：带小数点的字面是double而非float，而float需要用f或F后缀表明身份）" class="headerlink" title="浮点运算的精度（注意：带小数点的字面是double而非float，而float需要用f或F后缀表明身份）"></a>浮点运算的精度（注意：带小数点的字面是double而非float，而float需要用f或F后缀表明身份）</h1><ol>
+<li><strong>le-12</strong>:1x10^-12</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">f1 &#x3D;&#x3D; f2 &#x2F;&#x2F;可能失败</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fabs（f1-f2）&lt;le-12</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><p>没特别需要，浮点数类型用<strong>double</strong></p>
+</li>
+<li><p>无穷大或无穷小只能用浮点数来表达</p>
+</li>
+<li><table>
+<thead>
+<tr>
+<th align="center">类型</th>
+<th align="center">scanf</th>
+<th align="center">printf</th>
+<th align="center">有效数字</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">float</td>
+<td align="center">%f</td>
+<td align="center">%f，%e</td>
+<td align="center">7</td>
+</tr>
+<tr>
+<td align="center">double</td>
+<td align="center">%lf</td>
+<td align="center">%f，%e</td>
+<td align="center">15</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+<h1 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h1><ul>
+<li><strong>自动类型转换</strong>：<ul>
+<li>当运算符的两边出现不一致的类型时，会自动转换成较大的类型（即能表达的数的范围更大）如：char→short→int→long→long long        int→float→double</li>
+<li>对于printf，任何小于int的类型会被转换成int；float会被转换成double</li>
+<li>但scanf不会，要输入short，需要%hd；要输入int，需要%d</li>
+</ul>
+</li>
+<li><strong>强制类型转换</strong>：把一个量强制转换成另一个类型，需要：（类型）值<br>如：(int)10.2   (short)32<br><strong>注意</strong>：<ul>
+<li>只是从那个变量计算出了一个新的类型的值，它并不改变那个变量，无论是值还是类型都不改变 。</li>
+<li>强制类型转换的优先级高于四则运算</li>
+</ul>
+</li>
+</ul>
+<h1 id="sizeof：是一个运算符，给出某个类型或变量在内存中所占据的字节数"><a href="#sizeof：是一个运算符，给出某个类型或变量在内存中所占据的字节数" class="headerlink" title="sizeof：是一个运算符，给出某个类型或变量在内存中所占据的字节数"></a>sizeof：是一个运算符，给出某个类型或变量在内存中所占据的字节数</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int a;</span><br><span class="line">a &#x3D; 6;</span><br><span class="line">printf(&quot;sizeof(int)&#x3D;%ld\n&quot;, sizeof(int));</span><br><span class="line">printf(&quot;sizeof(a)&#x3D;%ld\n&quot;, sizeof(a));</span><br></pre></td></tr></table></figure>
+
+<p>注意：</p>
+<ul>
+<li>sizeof是静态运算符，它的结果在编译时刻就决定了；</li>
+<li>不要在sizeof的括号里做运算，这些运算不会做的</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/12/27/C-language-note2/" data-id="cl2xc6oxv00028ju4buyl3qam" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+    <article id="posts-C-language-note1" class="article article-type-posts" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/12/27/C-language-note1/" class="article-date">
+  <time datetime="2020-12-27T09:00:46.000Z" itemprop="datePublished">2020-12-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/12/27/C-language-note1/">C_language_note1</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+	<h1 id="程序框架"><a href="#程序框架" class="headerlink" title="程序框架"></a><strong>程序框架</strong></h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line"></span><br><span class="line">1. &#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">​    代码</span><br><span class="line"></span><br><span class="line">​    return 0;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="字符意义"><a href="#字符意义" class="headerlink" title="字符意义"></a><strong>字符意义</strong></h1><ol>
+<li><p>**””**里面的内容叫做“字符串”</p>
+</li>
+<li><p><strong>printf</strong>会把其中的内容原封不动地输出</p>
+</li>
+<li><p><strong>\n</strong>表示需要输出的结果后面换一行</p>
+</li>
+<li><p><strong>%d</strong>说明后面有一个整数要输出在这个位置上</p>
+</li>
+<li><p>**%**指取余。eg.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">109%10&#x3D;9</span><br></pre></td></tr></table></figure>
+
+
+
+</li>
+</ol>
+<ol start="6">
+<li><p>int（变量类型） price（变量名字）</p>
+<ul>
+<li>变量需要一个名字，而名字是一种“标识符”，用来识别这个和那个的不同的名字；</li>
+<li>构造规则：1.标识符只能由字母、数字和下划线组成；2.数字不可以出现在第一个位置上</li>
+</ul>
+</li>
+</ol>
+<h1 id="运算符（“-”，“-”，”-”，“–”）"><a href="#运算符（“-”，“-”，”-”，“–”）" class="headerlink" title="运算符（“+”，“-”，”++”，“–”）"></a><strong>运算符</strong>（“+”，“-”，”++”，“–”）</h1><p><strong>“++”</strong>（递增）<strong>“–”</strong>（递减）是两个特殊的运算符是单目运算符，算子需为变量，作用是给这个变量“+1”或“-1”</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">count++ ~ count+&#x3D;1 ~ count&#x3D;count+1</span><br></pre></td></tr></table></figure>
+
+<p>关系换算：<strong>“= =”</strong>相等，<strong>“!=”</strong>不相等，<strong>“&gt;”</strong>大于，<strong>“&gt;=”</strong>大于或等于，<strong>“&lt;”</strong>小于，<strong>“&lt;=”</strong>小于或等于</p>
+<ul>
+<li>所有的关系运算符的优先级比算术运算的低，但比赋值运算的高；</li>
+<li>判断是否相等的==和!=的优先级比其他的低，而连续的关系运算是从左到右进行的–&gt;</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">7&gt;&#x3D;3+4等于1</span><br><span class="line">5&gt;3&#x3D;&#x3D;6&gt;4等于1</span><br><span class="line">6&gt;5&gt;4等于0</span><br></pre></td></tr></table></figure>
+
+<h1 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a><strong>数据类型</strong></h1><p>整数：1. int 2. printf（”%d”,…） 3. scanf(“%d”,…)</p>
+<p>带小数点的数：1. double 2. printf（”%f”,…） 3. scanf(“%f”,…)</p>
+<h1 id="多路分支"><a href="#多路分支" class="headerlink" title="多路分支"></a><strong>多路分支</strong></h1><p>一、if-else    （该代码会使程序逐一往下判断是否与规定值相等相等就完成，否则继续往下判断）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">if（ type&#x3D;&#x3D;1 ）</span><br><span class="line">	printf(&quot;你好&quot;)；</span><br><span class="line">else if ( type&#x3D;&#x3D;2 )</span><br><span class="line">	printf(&quot;早上好&quot;)；</span><br><span class="line">else if ( type&#x3D;&#x3D;3 )</span><br><span class="line">	printf(&quot;晚上好&quot;)；</span><br><span class="line">...</span><br><span class="line">else</span><br><span class="line">	printf(&quot;啊，什么啊？&quot;);</span><br></pre></td></tr></table></figure>
+
+<p>二、switch-case    </p>
+<ul>
+<li>该代码会使程序直接执行与规定值相等的条件句；</li>
+<li>在执行完分支中的最后一条语句后，后面没有break，就好顺序执行到下面的case里去，知道遇到一个break，或者switch结束为止</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">switch （ type ）&#123;</span><br><span class="line">	case 1:</span><br><span class="line">	printf(&quot;你好&quot;);</span><br><span class="line">	break;</span><br><span class="line">	case 2:</span><br><span class="line">	printf(&quot;早上好&quot;);</span><br><span class="line">	break;</span><br><span class="line">	case 3:</span><br><span class="line">	printf(&quot;晚上好&quot;);</span><br><span class="line">	break;</span><br><span class="line">	...</span><br><span class="line">	default:</span><br><span class="line">	printf(&quot;啊，什么啊？&quot;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>switch （ 控制表达式 ）｛    （控制表达式只能是整数型的结果）</p>
+<p>case 常量:                           （常量可以是常数，也可以是常数计算的表达式）</p>
+<p>​    语句</p>
+<p>​    …..</p>
+<p>case 常量:</p>
+<p>​     语句</p>
+<p>​     …..</p>
+<p>default：</p>
+<p>​     语句</p>
+<p>​     …..</p>
+<p>｝</p>
+<p>注意：</p>
+<ul>
+<li>永远在if和else后面加上大括号；</li>
+<li>default：当所有条件都不匹配就执行该条件</li>
+</ul>
+<h1 id="注释（以“-”开头的语句把程序分成了几个部分）（延续数行的注释，用“”）"><a href="#注释（以“-”开头的语句把程序分成了几个部分）（延续数行的注释，用“”）" class="headerlink" title="注释（以“//”开头的语句把程序分成了几个部分）（延续数行的注释，用“”）"></a><strong>注释</strong>（以<strong>“//”</strong>开头的语句把程序分成了几个部分）（延续数行的注释，用“”）</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*输入注释*&#x2F;</span><br></pre></td></tr></table></figure>
+
+<p>eg.// 初始化</p>
+<p>​     //读入金额和票面</p>
+<p>​     //计算找零</p>
+<p>分成了三个部分</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/12/27/C-language-note1/" data-id="cl2xc6oxo00008ju435sach4p" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
+
+
+  <nav id="page-nav">
+    
+    <a class="extend prev" rel="prev" href="/page/2/">&amp;laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+  </nav>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">April 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">December 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/05/08/HTTP%E6%98%AF%E4%B8%8D%E4%BF%9D%E5%AD%98%E7%8A%B6%E6%80%81%E7%9A%84%E5%8D%8F%E8%AE%AE/">HTTP是不保存状态的协议</a>
+          </li>
+        
+          <li>
+            <a href="/2022/05/04/HTTP%E5%8D%8F%E8%AE%AE%E7%94%A8%E4%BA%8E%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%92%8C%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B9%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1/">HTTP协议用于客户端和服务器之间的通信</a>
+          </li>
+        
+          <li>
+            <a href="/2022/04/24/URI%E5%92%8CURL/">URI和URL</a>
+          </li>
+        
+          <li>
+            <a href="/2022/04/17/%E4%BB%A5%E5%A4%AA%E7%BD%91%E8%A7%A3%E5%B0%81%E8%A3%85%E8%BF%87%E7%A8%8B/">以太网解封装过程</a>
+          </li>
+        
+          <li>
+            <a href="/2022/04/10/%E5%90%84%E7%A7%8D%E5%8D%8F%E8%AE%AE%E4%B8%8EHTTP%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%85%B3%E7%B3%BB/">各种协议与HTTP协议的关系</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

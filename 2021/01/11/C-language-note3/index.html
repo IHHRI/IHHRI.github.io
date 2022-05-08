@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>C_language_note3 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="case用法： 123456789101112131415do &amp;#123;		int d &#x3D; x &#x2F; mask;		switch ( d ) &amp;#123;			case 0: printf(&quot;ling&quot;); break;			case 1: printf(&quot;yi&quot;); break;			case 2: printf(&quot;er&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C_language_note3">
+<meta property="og:url" content="http://example.com/2021/01/11/C-language-note3/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="case用法： 123456789101112131415do &amp;#123;		int d &#x3D; x &#x2F; mask;		switch ( d ) &amp;#123;			case 0: printf(&quot;ling&quot;); break;			case 1: printf(&quot;yi&quot;); break;			case 2: printf(&quot;er&amp;">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2021-01-11T14:18:54.000Z">
+<meta property="article:modified_time" content="2022-05-08T13:34:02.300Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+      	
+	  <a id="nav-github-link" class="nav-icon" target="_blank" rel="noopener" href="https://github.com/IHHRI" title="Github"></a>
+      	
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="posts-C-language-note3" class="article article-type-posts" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2021/01/11/C-language-note3/" class="article-date">
+  <time datetime="2021-01-11T14:18:54.000Z" itemprop="datePublished">2021-01-11</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      C_language_note3
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+	<ol>
+<li><p><u>case用法：</u></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">do &#123;</span><br><span class="line">		int d &#x3D; x &#x2F; mask;</span><br><span class="line">		switch ( d ) &#123;</span><br><span class="line">			case 0: printf(&quot;ling&quot;); break;</span><br><span class="line">			case 1: printf(&quot;yi&quot;); break;</span><br><span class="line">			case 2: printf(&quot;er&quot;); break;</span><br><span class="line">			case 3: printf(&quot;san&quot;); break;</span><br><span class="line">			case 4: printf(&quot;si&quot;); break;</span><br><span class="line">			case 5: printf(&quot;wu&quot;); break;</span><br><span class="line">			case 6: printf(&quot;liu&quot;); break;</span><br><span class="line">			case 7: printf(&quot;ba&quot;); break;</span><br><span class="line">			case 8: printf(&quot;qi&quot;); break;</span><br><span class="line">			case 9: printf(&quot;jiu&quot;); break;</span><br><span class="line">		&#125;</span><br><span class="line">		if ( mask &gt; 9 ) printf(&quot; &quot;);</span><br></pre></td></tr></table></figure>
+
+<p>输出与<strong>d</strong>的值相关，与<strong>case</strong>后的值相对应来输出</p>
+</li>
+<li><p><u>浮点运算的精度</u></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">f1 &#x3D;&#x3D; f2 &#x2F;&#x2F;可能失败</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fabs（f1-f2）&lt;le-12	&#x2F;&#x2F;**le-12**:1x10^-12</span><br></pre></td></tr></table></figure>
+
+<p>（注意：1.带小数点的字面是<strong>double</strong>而非<strong>float</strong>，而<strong>float</strong>需要用<strong>f</strong>或<strong>F</strong>后缀表明身份；2.没特别需要，浮点数类型用<strong>double</strong>）</p>
+</li>
+<li><p><u>变量定义用法需注意</u></p>
+<ul>
+<li>若在后面定义a,<strong>b</strong>为<strong>double</strong>，前面则不能在定义<strong>a</strong>,<strong>b</strong>为<strong>double</strong>，否则会出现错误</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">double a,b;</span><br><span class="line"></span><br><span class="line">scanf(&quot;%d %d&quot;, &amp;a, &amp;b);</span><br><span class="line"></span><br><span class="line">printf(&quot;%.9lf&quot;,(double)a&#x2F;b);</span><br></pre></td></tr></table></figure>
+
+<p>正确为</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">int a,b;</span><br><span class="line">	</span><br><span class="line">scanf(&quot;%d %d&quot;, &amp;a, &amp;b);</span><br><span class="line"></span><br><span class="line">printf(&quot;%.9lf&quot;,(double)a&#x2F;b);</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/01/11/C-language-note3/" data-id="cl2xc6oxv00038ju46wrb54lo" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2021/03/16/C-language-note4/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          C_language_note4
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/12/27/prepare-for-posts/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">prepare_for_posts</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">April 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">December 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/05/08/HTTP%E6%98%AF%E4%B8%8D%E4%BF%9D%E5%AD%98%E7%8A%B6%E6%80%81%E7%9A%84%E5%8D%8F%E8%AE%AE/">HTTP是不保存状态的协议</a>
+          </li>
+        
+          <li>
+            <a href="/2022/05/04/HTTP%E5%8D%8F%E8%AE%AE%E7%94%A8%E4%BA%8E%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%92%8C%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B9%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1/">HTTP协议用于客户端和服务器之间的通信</a>
+          </li>
+        
+          <li>
+            <a href="/2022/04/24/URI%E5%92%8CURL/">URI和URL</a>
+          </li>
+        
+          <li>
+            <a href="/2022/04/17/%E4%BB%A5%E5%A4%AA%E7%BD%91%E8%A7%A3%E5%B0%81%E8%A3%85%E8%BF%87%E7%A8%8B/">以太网解封装过程</a>
+          </li>
+        
+          <li>
+            <a href="/2022/04/10/%E5%90%84%E7%A7%8D%E5%8D%8F%E8%AE%AE%E4%B8%8EHTTP%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%85%B3%E7%B3%BB/">各种协议与HTTP协议的关系</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

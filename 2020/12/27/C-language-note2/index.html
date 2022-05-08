@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>C_language_note2 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="循环：1.do-while；2.while（if）；3.fordo-while 先做循环内的句子再判断条件 while (if) for对于的意思（ 初始动作【可省略】；循环继续条件；循环每轮要做的动作【可省略】） 循环控制变量i只在循环里被使用，在循环外面没有任何用处，可以把变量i的定义写到for语句里面。eg. 1for ( int&#x3D;1; int&lt;&#x3D;n; i++ )&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C_language_note2">
+<meta property="og:url" content="http://example.com/2020/12/27/C-language-note2/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="循环：1.do-while；2.while（if）；3.fordo-while 先做循环内的句子再判断条件 while (if) for对于的意思（ 初始动作【可省略】；循环继续条件；循环每轮要做的动作【可省略】） 循环控制变量i只在循环里被使用，在循环外面没有任何用处，可以把变量i的定义写到for语句里面。eg. 1for ( int&#x3D;1; int&lt;&#x3D;n; i++ )&amp;">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-12-27T09:03:04.000Z">
+<meta property="article:modified_time" content="2022-05-08T13:34:02.300Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+      	
+	  <a id="nav-github-link" class="nav-icon" target="_blank" rel="noopener" href="https://github.com/IHHRI" title="Github"></a>
+      	
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="posts-C-language-note2" class="article article-type-posts" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/12/27/C-language-note2/" class="article-date">
+  <time datetime="2020-12-27T09:03:04.000Z" itemprop="datePublished">2020-12-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      C_language_note2
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+	<h1 id="循环：1-do-while；2-while（if）；3-for"><a href="#循环：1-do-while；2-while（if）；3-for" class="headerlink" title="循环：1.do-while；2.while（if）；3.for"></a>循环：1.do-while；2.while（if）；3.for</h1><p><strong>do-while</strong></p>
+<p>先做循环内的句子再判断条件</p>
+<p><strong>while (if)</strong></p>
+<p><strong>for</strong><u>对于的意思</u>（ 初始动作【可省略】<strong>；</strong>循环继续条件<strong>；</strong>循环每轮要做的动作【可省略】）</p>
+<p>循环控制变量<strong>i</strong>只在循环里被使用，在循环外面没有任何用处，可以把变量<strong>i</strong>的定义写到for语句里面。eg.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">for ( int&#x3D;1; int&lt;&#x3D;n; i++ )&#x2F;&#x2F;only c99</span><br></pre></td></tr></table></figure>
+
+<p>读成：对于一开始的<strong>int=1</strong>，当<strong>int&lt;=n</strong>时，重复做循环体，每轮循环在做完循环体内语句后，使得**i++**。</p>
+<p><strong>总结：</strong></p>
+<ol>
+<li><p>for==while</p>
+</li>
+<li><p>如有固定次数，用for</p>
+</li>
+<li><p>如果必须执行一次，用do_while</p>
+</li>
+<li><p>其他用while</p>
+</li>
+<li><p>跳出循环：</p>
+<p>1）break（一层一层的跳出）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int x;</span><br><span class="line">	int one, two, five;</span><br><span class="line">	int exit &#x3D; 0;</span><br><span class="line">	&#x2F;&#x2F;scanf(&quot;%d&quot;, &amp;x);</span><br><span class="line">	x &#x3D; 2;</span><br><span class="line">	for ( one &#x3D; 1; one &lt; x*10; one++ ) &#123;</span><br><span class="line">		for ( two &#x3D; 1; two &lt; x*10&#x2F;2; two++ ) &#123;</span><br><span class="line">			for ( five &#x3D; 1; five &lt; x*10&#x2F;5; five++ ) &#123;</span><br><span class="line">				if ( one + two*2 + five*5 &#x3D;&#x3D; x*10 ) &#123;</span><br><span class="line">					printf(&quot;可以用%d个1角加%d个2角加%d个五角得到%d元\n&quot;,</span><br><span class="line">						one, two, five, x);</span><br><span class="line">					exit &#x3D; 1;</span><br><span class="line">					break; </span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">			if ( exit &#x3D;&#x3D;1 ) break;</span><br><span class="line">		&#125;</span><br><span class="line">		if ( exit &#x3D;&#x3D;1 ) break;</span><br><span class="line">	&#125;</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2）goto <u>out</u> （直接跳出，out可用其他代码代替。tips：<strong>尽量在多重循环跳出到最外层使用</strong>）</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;stdio.h&gt;</span><br><span class="line"></span><br><span class="line">int main()</span><br><span class="line">&#123;</span><br><span class="line">	int x;</span><br><span class="line">	int one, two, five;</span><br><span class="line">	int exit &#x3D; 0;</span><br><span class="line">	&#x2F;&#x2F;scanf(&quot;%d&quot;, &amp;x);</span><br><span class="line">	x &#x3D; 2;</span><br><span class="line">	for ( one &#x3D; 1; one &lt; x*10; one++ ) &#123;</span><br><span class="line">		for ( two &#x3D; 1; two &lt; x*10&#x2F;2; two++ ) &#123;</span><br><span class="line">			for ( five &#x3D; 1; five &lt; x*10&#x2F;5; five++ ) &#123;</span><br><span class="line">				if ( one + two*2 + five*5 &#x3D;&#x3D; x*10 ) &#123;</span><br><span class="line">					printf(&quot;可以用%d个1角加%d个2角加%d个五角得到%d元\n&quot;,</span><br><span class="line">						one, two, five, x);</span><br><span class="line">						goto out; </span><br><span class="line">				&#125;</span><br><span class="line">			&#125;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">out:</span><br><span class="line">	return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>3）continue    (跳过循环这一轮剩下的语句进入下一轮)</p>
+</li>
+</ol>
+<h1 id="浮点运算的精度（注意：带小数点的字面是double而非float，而float需要用f或F后缀表明身份）"><a href="#浮点运算的精度（注意：带小数点的字面是double而非float，而float需要用f或F后缀表明身份）" class="headerlink" title="浮点运算的精度（注意：带小数点的字面是double而非float，而float需要用f或F后缀表明身份）"></a>浮点运算的精度（注意：带小数点的字面是double而非float，而float需要用f或F后缀表明身份）</h1><ol>
+<li><strong>le-12</strong>:1x10^-12</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">f1 &#x3D;&#x3D; f2 &#x2F;&#x2F;可能失败</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fabs（f1-f2）&lt;le-12</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><p>没特别需要，浮点数类型用<strong>double</strong></p>
+</li>
+<li><p>无穷大或无穷小只能用浮点数来表达</p>
+</li>
+<li><table>
+<thead>
+<tr>
+<th align="center">类型</th>
+<th align="center">scanf</th>
+<th align="center">printf</th>
+<th align="center">有效数字</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">float</td>
+<td align="center">%f</td>
+<td align="center">%f，%e</td>
+<td align="center">7</td>
+</tr>
+<tr>
+<td align="center">double</td>
+<td align="center">%lf</td>
+<td align="center">%f，%e</td>
+<td align="center">15</td>
+</tr>
+</tbody></table>
+</li>
+</ol>
+<h1 id="类型转换"><a href="#类型转换" class="headerlink" title="类型转换"></a>类型转换</h1><ul>
+<li><strong>自动类型转换</strong>：<ul>
+<li>当运算符的两边出现不一致的类型时，会自动转换成较大的类型（即能表达的数的范围更大）如：char→short→int→long→long long        int→float→double</li>
+<li>对于printf，任何小于int的类型会被转换成int；float会被转换成double</li>
+<li>但scanf不会，要输入short，需要%hd；要输入int，需要%d</li>
+</ul>
+</li>
+<li><strong>强制类型转换</strong>：把一个量强制转换成另一个类型，需要：（类型）值<br>如：(int)10.2   (short)32<br><strong>注意</strong>：<ul>
+<li>只是从那个变量计算出了一个新的类型的值，它并不改变那个变量，无论是值还是类型都不改变 。</li>
+<li>强制类型转换的优先级高于四则运算</li>
+</ul>
+</li>
+</ul>
+<h1 id="sizeof：是一个运算符，给出某个类型或变量在内存中所占据的字节数"><a href="#sizeof：是一个运算符，给出某个类型或变量在内存中所占据的字节数" class="headerlink" title="sizeof：是一个运算符，给出某个类型或变量在内存中所占据的字节数"></a>sizeof：是一个运算符，给出某个类型或变量在内存中所占据的字节数</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">int a;</span><br><span class="line">a &#x3D; 6;</span><br><span class="line">printf(&quot;sizeof(int)&#x3D;%ld\n&quot;, sizeof(int));</span><br><span class="line">printf(&quot;sizeof(a)&#x3D;%ld\n&quot;, sizeof(a));</span><br></pre></td></tr></table></figure>
+
+<p>注意：</p>
+<ul>
+<li>sizeof是静态运算符，它的结果在编译时刻就决定了；</li>
+<li>不要在sizeof的括号里做运算，这些运算不会做的</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2020/12/27/C-language-note2/" data-id="cl2xc6oxv00028ju4buyl3qam" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2020/12/27/prepare-for-posts/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          prepare_for_posts
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/12/27/C-language-note1/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">C_language_note1</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">April 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">December 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/05/08/HTTP%E6%98%AF%E4%B8%8D%E4%BF%9D%E5%AD%98%E7%8A%B6%E6%80%81%E7%9A%84%E5%8D%8F%E8%AE%AE/">HTTP是不保存状态的协议</a>
+          </li>
+        
+          <li>
+            <a href="/2022/05/04/HTTP%E5%8D%8F%E8%AE%AE%E7%94%A8%E4%BA%8E%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%92%8C%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B9%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1/">HTTP协议用于客户端和服务器之间的通信</a>
+          </li>
+        
+          <li>
+            <a href="/2022/04/24/URI%E5%92%8CURL/">URI和URL</a>
+          </li>
+        
+          <li>
+            <a href="/2022/04/17/%E4%BB%A5%E5%A4%AA%E7%BD%91%E8%A7%A3%E5%B0%81%E8%A3%85%E8%BF%87%E7%A8%8B/">以太网解封装过程</a>
+          </li>
+        
+          <li>
+            <a href="/2022/04/10/%E5%90%84%E7%A7%8D%E5%8D%8F%E8%AE%AE%E4%B8%8EHTTP%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%85%B3%E7%B3%BB/">各种协议与HTTP协议的关系</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>

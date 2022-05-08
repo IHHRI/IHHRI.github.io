@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+
+  
+  <title>与HTTP关系密切的协议_IP.TCP.DNS | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="​        今天看到一句话：在TCP&#x2F;IP协议族中与HTTP密不可分的3个协议：IP、TCP和DNS，我就在想为什么在这么多协议中，偏偏是IP、TCP和DNS是密不可分？ 通过阅读图解HTTP，其中有着明确的解释：  IP 按层次分，IP位于网络层。几乎所有使用网络的系统都会用到IP协议。TCP&#x2F;IP协议族中的IP指的就是网际协议，协议名称中占据了一半位置，其重要性可见一斑。（另外，“IP”">
+<meta property="og:type" content="article">
+<meta property="og:title" content="与HTTP关系密切的协议_IP.TCP.DNS">
+<meta property="og:url" content="http://example.com/2022/04/05/%E4%B8%8EHTTP%E5%85%B3%E7%B3%BB%E5%AF%86%E5%88%87%E7%9A%84%E5%8D%8F-IP-TCP-DNS/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="​        今天看到一句话：在TCP&#x2F;IP协议族中与HTTP密不可分的3个协议：IP、TCP和DNS，我就在想为什么在这么多协议中，偏偏是IP、TCP和DNS是密不可分？ 通过阅读图解HTTP，其中有着明确的解释：  IP 按层次分，IP位于网络层。几乎所有使用网络的系统都会用到IP协议。TCP&#x2F;IP协议族中的IP指的就是网际协议，协议名称中占据了一半位置，其重要性可见一斑。（另外，“IP”">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-04-05T12:45:15.000Z">
+<meta property="article:modified_time" content="2022-05-08T13:34:02.304Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+<meta name="generator" content="Hexo 5.2.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+      	
+	  <a id="nav-github-link" class="nav-icon" target="_blank" rel="noopener" href="https://github.com/IHHRI" title="Github"></a>
+      	
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="posts-与HTTP关系密切的协-IP-TCP-DNS" class="article article-type-posts" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2022/04/05/%E4%B8%8EHTTP%E5%85%B3%E7%B3%BB%E5%AF%86%E5%88%87%E7%9A%84%E5%8D%8F-IP-TCP-DNS/" class="article-date">
+  <time datetime="2022-04-05T12:45:15.000Z" itemprop="datePublished">2022-04-05</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      与HTTP关系密切的协议_IP.TCP.DNS
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+	<p>​        今天看到一句话：在<strong>TCP/IP协议族</strong>中与<strong>HTTP</strong>密不可分的3个协议：<strong>IP</strong>、<strong>TCP</strong>和<strong>DNS</strong>，我就在想为什么在这么多协议中，偏偏是<strong>IP</strong>、<strong>TCP</strong>和<strong>DNS</strong>是密不可分？</p>
+<p>通过阅读图解<strong>HTTP</strong>，其中有着明确的解释：</p>
+<ol>
+<li><h4 id="IP"><a href="#IP" class="headerlink" title="IP"></a><strong>IP</strong></h4><ul>
+<li>按层次分，<strong>IP</strong>位于网络层。几乎所有使用网络的系统都会用到<strong>IP</strong>协议。<strong>TCP/IP协议族</strong>中的<strong>IP</strong>指的就是网际协议，协议名称中占据了一半位置，其重要性可见一斑。（另外，“<strong>IP</strong>”和“<strong>IP地址</strong>”不一样，“<strong>IP</strong>”其实是一种协议的名称。）</li>
+<li><strong>IP</strong>协议的作用是把各种数据包传送给对方。而要保证确实传送到对方那里，就要满足各类条件。其中最重要的两个条件是<strong>IP地址</strong>和<strong>MAC地址</strong>。<strong>IP地址</strong>指明了节点被分配到的地址，<strong>MAC地址</strong>是指网卡所属的固定地址。<strong>IP地址</strong>可以和<strong>MAC地址</strong>进行配对。<strong>IP地址</strong>可变换，但<strong>MAC地址</strong>基本上不会更改。</li>
+</ul>
+</li>
+<li><h4 id="TCP"><a href="#TCP" class="headerlink" title="TCP"></a><strong>TCP</strong></h4><ul>
+<li>按层次分，<strong>TCP</strong>位于传输层，提供可靠的字节流服务。（字节流服务：指为了方便传输，将大块数据分割成以报文段为单位的数据包进行管理。而可靠的传输服务是指，能够把数据准确可靠地传给对方。）</li>
+<li><strong>TCP</strong>协议为了更容易传送大数据才把数据分割，而且<strong>TCP</strong>协议能够确认数据最终是否送达到对方。在这个过程<strong>TCP</strong>协议采用了三次握手策略。（握手过程中使用了<strong>TCP</strong>的标志——<strong>SYN</strong>和<strong>ACK</strong>）发送端首先发送一个带<strong>SYN</strong>标志的数据包给对方。接收端收到后，回传一个带有<strong>SYN/ACK</strong>标志的数据包以示传达确认信息。最后，发送端再回传一个带<strong>ACK</strong>标志的数据包，代表 “握手”结束。若在握手过程中某个阶段莫名中断，<strong>TCP</strong>协议会再次以相同的顺序发送相同的数据包。</li>
+</ul>
+</li>
+<li><h4 id="DNS"><a href="#DNS" class="headerlink" title="DNS"></a><strong>DNS</strong></h4><ul>
+<li><strong>DNS</strong>服务是和<strong>HTTP</strong>协议一样位于应用层的协议。它提供域名到<strong>IP</strong>地址之问的解析服务。计算机既可以被赋予<strong>IP</strong>地址，也可以被赋予主机名和域名。比如<a target="_blank" rel="noopener" href="http://www.hackr.jp/">www.hackr.jp</a>.</li>
+<li>用户通常使用主机名或域名来访问对方的计算机，而不是直接通过IP地址访问。因为与IP地址的一组纯数字相比，用字母配合数字的表示形式来指定计算机名更符合人类的记忆习惯。但要让计算机去理解名称，相对而言就变得困难了。因为计算机更擅长处理一长串数字。</li>
+<li>为了解决上述的问题，<strong>DNS</strong>服务应运而生。<strong>DNS</strong>协议提供通过域名查找<strong>IP</strong>地址，或逆向从<strong>IP</strong>地址反查域名的服务。</li>
+</ul>
+</li>
+</ol>
+<h4 id="所以，IP、TCP和DNS在TCP-IP协议族中与HTTP中的作用分别是：IP负责传输、TCP确保可靠性和DNS负责域名的解析"><a href="#所以，IP、TCP和DNS在TCP-IP协议族中与HTTP中的作用分别是：IP负责传输、TCP确保可靠性和DNS负责域名的解析" class="headerlink" title="所以，IP、TCP和DNS在TCP/IP协议族中与HTTP中的作用分别是：IP负责传输、TCP确保可靠性和DNS负责域名的解析"></a>所以，<strong>IP</strong>、<strong>TCP</strong>和<strong>DNS</strong>在<strong>TCP/IP协议族</strong>中与<strong>HTTP</strong>中的作用分别是：IP负责传输、TCP确保可靠性和DNS负责域名的解析</h4>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/04/05/%E4%B8%8EHTTP%E5%85%B3%E7%B3%BB%E5%AF%86%E5%88%87%E7%9A%84%E5%8D%8F-IP-TCP-DNS/" data-id="cl2xc6oya000k8ju49e55ge7c" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2022/04/10/%E5%90%84%E7%A7%8D%E5%8D%8F%E8%AE%AE%E4%B8%8EHTTP%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%85%B3%E7%B3%BB/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          各种协议与HTTP协议的关系
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2022/03/27/HTTP/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">HTTP</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/05/">May 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">April 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/02/">February 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/12/">December 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/05/">May 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/04/">April 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/03/">March 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/01/">January 2021</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/12/">December 2020</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/05/08/HTTP%E6%98%AF%E4%B8%8D%E4%BF%9D%E5%AD%98%E7%8A%B6%E6%80%81%E7%9A%84%E5%8D%8F%E8%AE%AE/">HTTP是不保存状态的协议</a>
+          </li>
+        
+          <li>
+            <a href="/2022/05/04/HTTP%E5%8D%8F%E8%AE%AE%E7%94%A8%E4%BA%8E%E5%AE%A2%E6%88%B7%E7%AB%AF%E5%92%8C%E6%9C%8D%E5%8A%A1%E5%99%A8%E4%B9%8B%E9%97%B4%E7%9A%84%E9%80%9A%E4%BF%A1/">HTTP协议用于客户端和服务器之间的通信</a>
+          </li>
+        
+          <li>
+            <a href="/2022/04/24/URI%E5%92%8CURL/">URI和URL</a>
+          </li>
+        
+          <li>
+            <a href="/2022/04/17/%E4%BB%A5%E5%A4%AA%E7%BD%91%E8%A7%A3%E5%B0%81%E8%A3%85%E8%BF%87%E7%A8%8B/">以太网解封装过程</a>
+          </li>
+        
+          <li>
+            <a href="/2022/04/10/%E5%90%84%E7%A7%8D%E5%8D%8F%E8%AE%AE%E4%B8%8EHTTP%E5%8D%8F%E8%AE%AE%E7%9A%84%E5%85%B3%E7%B3%BB/">各种协议与HTTP协议的关系</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2022 John Doe<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+  
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+  </div>
+</body>
+</html>
